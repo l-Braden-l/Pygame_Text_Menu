@@ -44,10 +44,9 @@ LAZER_SOUND = "C:\\Project-Text-Menu\\laser5.ogg"
 ZAP_SOUND = "C:\\Project-Text-Menu\\zap13.ogg"
 
 
-# -- Load Sounds -- # 
-roblox_soundL = pygame.mixer.Sound(ROBLOX_DEATH_SOUND)
-lazer_soundL = pygame.mixer.Sound(LAZER_SOUND)
-zap_soundL = pygame.mixer.Sound(ZAP_SOUND)
+
+
+
 
 def init_game (): 
     pygame.init()
@@ -67,13 +66,28 @@ def handle_events ():
              return False
     return True
 
+
 def main():
    screen = init_game()
    clock = pygame.time.Clock() # Initialize the clock here
+
+    # -- Load Sounds -- # 
+   roblox_soundL = pygame.mixer.Sound(ROBLOX_DEATH_SOUND)
+   lazer_soundL = pygame.mixer.Sound(LAZER_SOUND)
+   zap_soundL = pygame.mixer.Sound(ZAP_SOUND)
+
    running = True
    while running:
       running = handle_events()
+      # -- -- #
+
+
+
       screen.fill(WHITE) # Use color from config
+
+      # -- -- #
+
+
       pygame.display.flip()
 
       # -- Limit the frame rate to the specified frames per second (FPS) -- #

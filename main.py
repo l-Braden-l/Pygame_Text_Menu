@@ -44,10 +44,6 @@ LAZER_SOUND = "C:\\Project-Text-Menu\\laser5.ogg"
 ZAP_SOUND = "C:\\Project-Text-Menu\\zap13.ogg"
 
 
-
-
-
-
 def init_game (): 
     pygame.init()
     pygame.font.init()
@@ -71,10 +67,12 @@ def main():
    screen = init_game()
    clock = pygame.time.Clock() # Initialize the clock here
 
+
     # -- Load Sounds -- # 
    roblox_soundL = pygame.mixer.Sound(ROBLOX_DEATH_SOUND)
    lazer_soundL = pygame.mixer.Sound(LAZER_SOUND)
    zap_soundL = pygame.mixer.Sound(ZAP_SOUND)
+
 
    running = True
    while running:

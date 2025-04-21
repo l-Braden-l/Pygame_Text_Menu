@@ -87,7 +87,7 @@ def main():
    text_font = pygame.font.Font(TEXT_FONT, 30)
 
    # -- Menu -- # 
-   Menu = ["Press 'a' to play Sound Effect #1", "Press 's' to play Sound Effect #2", "Press 'b' to play background music", "Press 'p' to pause the background music", "Press 'f' to unpause the background music", "Press 'r' to generate a random text color", "Press 'u' to change the background"]
+   Menu = ["Press 'a' to play Sound Effect #1", "Press 's' to play Sound Effect #2", "Press 'b' to play background music", "Press 'p' to pause the background music", "Press 'f' to unpause the background music", "Press 'r' to generate a random text color", "Press 'u' for a surprise"]
 
    # -- Offset -- # 
    base_y = 30 # starting y-value for the top of menu

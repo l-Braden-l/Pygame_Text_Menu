@@ -41,7 +41,7 @@ ICON = "C:\\Project-Text-Menu\\favicon-starter-cropped.png"
     # - Sounds - #
 ROBLOX_DEATH_SOUND = "C:\\Project-Text-Menu\\roblox-death-sound.ogg"
 LAZER_SOUND = "C:\\Project-Text-Menu\\laser5.ogg"
-
+GHOST_SOUND = "C:\Project-Text-Menu\TunePocket-Ghost-Boo-1-Preview.mp3"
 
 # -- Intilize -- # 
 def init_game (): 
@@ -81,7 +81,7 @@ def main():
    # -- Load Sounds -- # 
    roblox_soundL = pygame.mixer.Sound(ROBLOX_DEATH_SOUND)
    lazer_soundL = pygame.mixer.Sound(LAZER_SOUND)
-
+   ghost_soundL = pygame.mixer.Sound(GHOST_SOUND)
 
    # -- Font -- # 
    text_font = pygame.font.Font(TEXT_FONT, 30)
@@ -122,9 +122,10 @@ def main():
       else: 
          text_color = GREEN
       if keys[pygame.K_u]:
+         screen.fill(BLACK)
          screen.blit(background_image, [200,200])
-      
-
+         ghost_soundL.play()
+         
       # -- Move Through Menu -- #
       for i in range(len(Menu)): 
          draw_text(screen, Menu[i], text_font, text_color, base_y + i * line_height)
